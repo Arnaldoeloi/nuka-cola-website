@@ -8,7 +8,7 @@
     <title>Nuka Cola</title>
 </head>
 <body>
-    <header>
+    <header id="main-header">
         <nav class="navbar">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -17,6 +17,16 @@
                 <li><a href="#">Clients</a></li>
             </ul>
         </nav>
+        <img id="bg" src="public/images/wide_render_BACK_03.png" alt="">
+        <img id="bg-rocks" src="public/images/wide_render_BACK_02.png" alt="">
+        <img id="bg-rock" src="public/images/wide_render_BACK_01.png" alt="">
+        <img id="front" src="public/images/wide_render_FRONT.png" alt="">
+        <div id="additional-content">
+            <div id="nuka-description">
+                <h1>Nuka Cola Quantum</h1>
+                <h3>From far beyond</h3>
+            </div>
+        </div>
     </header>
     <section>
         <div style="width: 150px;">
@@ -43,4 +53,20 @@
         </div>
     </section>
 </body>
+<script>
+    const bg        = document.getElementById("bg"); 
+    const bg_rocks  = document.getElementById("bg-rocks"); 
+    const bg_rock   = document.getElementById("bg-rock"); 
+    const front     = document.getElementById("front");
+    const text      = document.getElementById("nuka-description");
+
+    window.addEventListener('scroll', function(){
+        var value = window.scrollY;
+        bg.style.top        = (value/3) + 'px';
+        bg_rocks.style.top  = (value*0.25) + 'px';
+        bg_rock.style.top   = (value*0.15) + 'px';
+        front.style.top     = (value*0.01) + 'px';
+        text.style.top      = 300+(value*0.1) + 'px';
+    }); 
+</script>
 </html>
