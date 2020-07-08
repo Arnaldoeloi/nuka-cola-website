@@ -15,12 +15,32 @@ body{
     font-size: 1.2em;
 }
 
+.container{
 
+    width: 80%;
+}
 a {
     text-decoration: none;
     color: #ebebeb;
 }
 
+.font-overseer{
+    font-family: Overseer;
+}
+
+.text-upper{
+    text-transform: uppercase;
+}
+
+.text-center{
+    text-align: center;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 #main-header {
     position: relative;
