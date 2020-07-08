@@ -73,12 +73,15 @@
         bg_rocks.style.top  = (value*0.25) + 'px';
         bg_rock.style.top   = (value*0.15) + 'px';
         front.style.top     = (value*0.01) + 'px';
-        text.style.top      = 500+(-value*1) + 'px';
+        text.style.top      = (value*1.5) + 'px';
+        text.style.opacity  = 1-(value*0.007);
     });
 
+
+    const mouseInfluence = 0.01;
     window.addEventListener('mousemove', (e) => {
-        bottles.style.left = clamp(-e.clientX*0.01, -100, 200) + 'px';
-        bottles.style.top  = clamp(-e.clientY*0.01, -100, 200) + 'px';
+        bottles.style.left = -e.clientX*mouseInfluence + 'px';
+        bottles.style.top  = -e.clientY*mouseInfluence + 'px';
         // console.log({'clientX':e.clientX,'clientY':e.clientY});
     }); 
 </script>
