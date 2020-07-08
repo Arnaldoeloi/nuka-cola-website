@@ -17,10 +17,13 @@
                 <li><a href="#">Clients</a></li>
             </ul>
         </nav>
-        <img id="bg" src="public/images/wide_render_BACK_03.png" alt="">
-        <img id="bg-rocks" src="public/images/wide_render_BACK_02.png" alt="">
-        <img id="bg-rock" src="public/images/wide_render_BACK_01.png" alt="">
-        <img id="front" src="public/images/wide_render_FRONT.png" alt="">
+        <img id="bg" src="public/images/bg.png" alt="">
+        <img id="bg-rocks" src="public/images/back_02.png" alt="">
+        <img id="bg-rock" src="public/images/back_01.png" alt="">
+        <div class="anim-upndown" id="div-container">
+            <img id="bottles" src="public/images/bottles.png" alt="">
+        </div>
+        <img id="front" src="public/images/front_rock.png" alt="">
         <div id="additional-content">
             <div id="nuka-description">
                 <h1>Nuka Cola Quantum</h1>
@@ -54,11 +57,15 @@
     </section>
 </body>
 <script>
+    function clamp(val, min, max){
+        return Math.min(Math.max(min, val), max);
+    }
     const bg        = document.getElementById("bg"); 
     const bg_rocks  = document.getElementById("bg-rocks"); 
     const bg_rock   = document.getElementById("bg-rock"); 
     const front     = document.getElementById("front");
     const text      = document.getElementById("nuka-description");
+    const bottles   = document.getElementById("bottles");
 
     window.addEventListener('scroll', function(){
         var value = window.scrollY;
@@ -66,7 +73,13 @@
         bg_rocks.style.top  = (value*0.25) + 'px';
         bg_rock.style.top   = (value*0.15) + 'px';
         front.style.top     = (value*0.01) + 'px';
-        text.style.top      = 300+(value*0.1) + 'px';
+        text.style.top      = 500+(-value*1) + 'px';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        bottles.style.left = clamp(-e.clientX*0.01, -100, 200) + 'px';
+        bottles.style.top  = clamp(-e.clientY*0.01, -100, 200) + 'px';
+        // console.log({'clientX':e.clientX,'clientY':e.clientY});
     }); 
 </script>
 </html>
