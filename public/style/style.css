@@ -16,7 +16,6 @@ body{
 }
 
 .container{
-
     width: 80%;
 }
 a {
@@ -48,6 +47,10 @@ a {
     font-size: 2.4em;
 }
 
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
 .section{
     display: flex;
     /* align-items: center; */
@@ -68,6 +71,28 @@ a {
 #shop{
     background-image: url('../images/bg-grey.jpg'); 
     background-size: cover;
+}
+
+#about{
+    display: flex;
+    position: relative;
+    background-image: url('../images/bg-red.png'); 
+    /* height: 600px; */
+    background-size: cover;
+    min-height: 600px;
+}
+#about .container .content{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+
+
+.text-box{
+    font-weight: 500;
+    font-size: 1.4em;
+    width: 30%;
 }
 #main-header:before {
     content: '';
@@ -165,7 +190,7 @@ a {
     text-align: center;
     z-index: 10;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 754px) {
     .navbar{
         width: 100%;
         text-align: center;
@@ -201,11 +226,22 @@ a {
         font-size: 1rem;
     }
 
+    #about .container .content{
+        flex-wrap: wrap;
+    }
+    
+    #about .container .content .text-box{
+        width: 100%;
+        font-size: 1em;
+    }
     .cards-bx .card {
         margin-right: 0px !important;
         margin-left: 0px !important ;
     }
 
+    .cards-bx{
+        flex-wrap: wrap;
+    }
 }
 .navbar ul{
     display: flex;
@@ -237,9 +273,12 @@ a {
 *   CARD
 *
 */
+
 .cards-bx{
     position: relative;
     display: flex;
+    justify-content: center;
+    min-height: 600px ;
 }
 .cards-bx .card{
     margin: 10px 30px;
@@ -261,6 +300,19 @@ a {
     clip-path: circle(150px at 80% 20%);
     transition: 0.5s ease-in-out;
 }
+
+/**
+*   HACK TO CHANGE BG-COLOR
+*   FIND A SOLUTION IN PROD
+**/
+.cards-bx .card:nth-child(2):before{
+    background-color: #8b2b66;
+}
+
+.cards-bx .card:nth-child(3):before{
+    background-color: #b45928;
+}
+
 
 .cards-bx .card:hover:before{
     clip-path: circle(300px at 80% -20%);
