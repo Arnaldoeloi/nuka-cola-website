@@ -27,19 +27,32 @@
         <div id="additional-content">
             <div id="nuka-description">
                 <h1>Nuka Cola Quantum</h1>
-                <h3>From far beyond</h3>
+                <span>From far beyond</span>
             </div>
         </div>
     </header>
-    <section>
+    <section id="shop" class="section">
         <div class="container text-center">
-            <h1 class="font-overseer">
+            <h1 class="font-overseer text-large">
                 Shop
             </h1>
             <p>
-                Enjoy the sweet taste of Cola before the bombs fall.
+                Enjoy the sweet taste of Cola before they bomb us all!
             </p>
+            <div class="cards-bx">
+                <div class="card">
+                    <div class="img-bx">
+                        <img src="public/images/products/nuka-quartz.png" alt="" height="300px">
+                    </div>
+                    <div class="content-box">
+                        <h2>Quartz</h2>
+                        
+                    </div>
+                    <a href="#">Buy</a>
+                </div>
+            </div>
         </div>
+
     </section>
 </body>
 <script>
@@ -59,8 +72,10 @@
         bg_rocks.style.top  = (value*0.25) + 'px';
         bg_rock.style.top   = (value*0.15) + 'px';
         front.style.top     = (value*0.01) + 'px';
-        text.style.top      = (value*1.5) + 'px';
-        text.style.opacity  = 1-(value*0.007);
+        if(screen.width>600){
+            text.style.top      = (value*0.75) + 'px';
+        }
+        text.style.opacity  = 1-(value*0.002);
     });
 
 

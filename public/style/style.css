@@ -36,9 +36,21 @@ a {
     text-align: center;
 }
 
-section{
+.text-small{
+    font-size: .6em;
+}
+
+.text-medium{
+    font-size: 1.2em;
+}
+
+.text-large{
+    font-size: 2.4em;
+}
+
+.section{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
 
@@ -50,17 +62,20 @@ section{
     /* background-size: cover; */
     height: 100vh;
     overflow: hidden;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
 }
-
+#shop{
+    background-image: url('../images/bg-grey.jpg'); 
+    background-size: cover;
+}
 #main-header:before {
     content: '';
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(0, 0, 0, 0) 80%, #111317 90%);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(0, 0, 0, 0) 95%, #0d0d0d 100%);
     z-index: 10;
 }
 
@@ -114,12 +129,11 @@ section{
     font-size: 3rem;
 }
 
-#additional-content h3{
+#additional-content span{
     z-index: 1;
     font-family: 'Roboto';
     text-transform: uppercase;
     font-weight: 200;
-    font-size: 1.6rem;
 }
 .anim-upndown{
     animation: upndown 3s;
@@ -145,12 +159,49 @@ section{
 }
 
 .navbar{
+    align-self: center;
     box-sizing: border-box;
-    width: 100%;
+    width: 70%;
     text-align: center;
     z-index: 10;
 }
+@media only screen and (max-width: 600px) {
+    .navbar{
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+    }
+    
+    .navbar ul{    
+        padding: 3px 3px;
+    }
 
+    .navbar ul li{
+        flex: 1;
+        justify-content: space-around;
+        padding: 2px;
+        font-size: 0.8em;
+    }
+    #bottles{
+        height: 70% !important;
+    }
+
+    #nuka-description{
+        top: 50%;
+        z-index: 1;
+        position: absolute;
+    }
+
+
+    #additional-content h1{
+        font-size: 2rem;
+    }
+    
+    #additional-content span{
+        font-size: 1rem;
+    }
+
+}
 .navbar ul{
     display: flex;
     list-style: none;
@@ -174,4 +225,89 @@ section{
     text-shadow: 1px 0px 3px white;
     transition: 0.2s;
     /* text-transform: uppercase; */
+}
+
+/**
+*
+*   CARD
+*
+*/
+.cards-bx{
+    position: relative;
+    display: flex;
+}
+.cards-bx .card{
+    margin: 10px 30px;
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.cards-bx .card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffc12b;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.cards-bx .card:hover:before{
+    clip-path: circle(300px at 80% -20%);
+}
+
+.cards-bx .card .img-bx{
+    position: absolute;
+    top: 30%;
+    transform: translateY(-40%);
+    z-index: 100;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.cards-bx .card:hover .img-bx{
+    top: 0%;
+    transform: translateY(0%) rotate(0deg) scale(0.8);
+}
+
+.cards-bx .card:hover .img-bx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-30deg) scale(0.8);
+    /* width: 270px; */
+}
+
+
+.cards-bx .card .content-box{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    z-index: 10;
+    /* color: #e9e9e9; */
+    transition: 1s;
+}
+
+.cards-bx .card:hover .content-box{
+    height: 250px ;
+}
+.cards-bx .card .content-box h2{
+    font-family: Overseer;
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 2.8rem;
+    transition: 1s ease-in-out;
+}
+.cards-bx .card:hover .content-box h2{
+    color: #fff;
+    font-size: 1.8rem;
 }
