@@ -201,6 +201,11 @@ a {
         font-size: 1rem;
     }
 
+    .cards-bx .card {
+        margin-right: 0px !important;
+        margin-left: 0px !important ;
+    }
+
 }
 .navbar ul{
     display: flex;
@@ -310,4 +315,44 @@ a {
 .cards-bx .card:hover .content-box h2{
     color: #fff;
     font-size: 1.8rem;
+}
+
+.cards-bx .card .content-box .stats .title{
+    font-weight: bolder;
+}
+.cards-bx .card .content-box .stats{
+    padding: 0px 15px;
+    text-align: center;
+    opacity: 0;
+    transition: 1s;
+}
+.cards-bx .card:hover .content-box .stats{
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+.cards-bx .card .content-box .actions{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.cards-bx .card .content-box .actions .btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    max-width: 150px;
+    border-radius: 4px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+.cards-bx .card:hover .content-box .btn{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: 1s;
 }
