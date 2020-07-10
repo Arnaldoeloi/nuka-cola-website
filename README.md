@@ -18,7 +18,7 @@ The project is made with vanilla javascript, CSS3 and HTML5. I used Blender to m
 
 #### 📜 Text
 
-    Some text were collected in [the Fallout wiki](https://fallout.fandom.com/).
+Some text were collected in [the Fallout wiki](https://fallout.fandom.com/).
 
 #### 🖼️ Images and Fonts
 
