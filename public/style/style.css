@@ -106,7 +106,7 @@ a {
 
 
 #about p{
-    width: 80%;
+    max-width: 75%;
     text-align: justify;
 }
 
@@ -216,10 +216,33 @@ a {
 }
 #bottles{
     /* filter: saturate(170%); */
-    animation: brightness-bottles 3s;
+    animation: brightness-bottles 3s ease-in-out;
+
     animation-iteration-count: infinite;
     z-index: 2;
 }
+
+@keyframes brightness-bottles{
+    from {
+        filter: brightness(100%);
+        -webkit-filter: drop-shadow(0px -23px 67px rgb(78, 169, 214, 0.75));
+        -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+        filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    }
+    50%   {
+        filter: brightness(120%);
+        -webkit-filter: drop-shadow(0px -23px 10px rgb(78, 169, 214, 0.2));
+        -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+        filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    }
+    to {
+        filter: brightness(100%);
+        -webkit-filter: drop-shadow(0px -23px 67px rgb(78, 169, 214, 0.75));
+        -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+        filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    }
+}
+
 #front{
     z-index: 3;
 }
@@ -252,7 +275,7 @@ a {
     font-weight: 200;
 }
 .anim-upndown{
-    animation: upndown 3s ease-in-out;
+    animation: upndown 5s ease-in-out;
     animation-iteration-count: infinite;
 }
 
@@ -262,11 +285,6 @@ a {
     to {filter: contrast(100%)}
 }
 
-@keyframes brightness-bottles{
-    from {filter: brightness(100%);}
-    50%   {filter: brightness(120%)}
-    to {filter: brightness(100%)}
-}
 
 @keyframes upndown {
     from {top: 0px;}
