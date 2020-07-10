@@ -16,6 +16,8 @@ The project is made with vanilla javascript, CSS3 and HTML5. I used Blender to m
 
 ### 📋 Acknowledgements
 
+FALLOUT is a trademark of Bethesda Softworks LLC. Filed in August 12 (2009), the FALLOUT covers Computer game programs and software.
+
 #### 📜 Text
 
 Some texts were collected in [the Fallout wiki](https://fallout.fandom.com/).
