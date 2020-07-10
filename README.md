@@ -9,5 +9,3 @@
 [Background photo created by dashu83 - www.freepik.com](https://www.freepik.com/free-photos-vectors/background)
 
 ["Enjoy a... Nuka Cola Poster"](https://br.pinterest.com/pin/430727151854774107/?autologin=true)
-
-["Go up arrow"](https://www.dlf.pt/ddetail/wbxRmi_vintage-double-sided-light-up-arrow-sign-light/)
