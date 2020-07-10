@@ -18,6 +18,20 @@ body{
     font-size: 1.2em;
 }
 
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    background: #2a2a2a ;
+}
+
+footer p{
+    font-size: 0.65em;
+    padding: 50px;
+    color: #e4e4e4;
+}
+
 .container{
     width: 80%;
 }
@@ -96,6 +110,7 @@ a {
     min-height: 600px;
     align-items: center;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 #about .container{
@@ -109,7 +124,7 @@ a {
 
 
 #about p{
-    max-width: 75%;
+    width: 75%;
     text-align: justify;
 }
 
@@ -152,6 +167,14 @@ a {
         justify-content: center;
         text-align: center;
         padding: 0px 10px ;
+    }
+
+    footer img{
+        display: none;
+    }
+    footer p{
+        text-align: center;
+        padding: 50px 0px;
     }
 }
 
@@ -407,7 +430,7 @@ a {
     margin-bottom: 50px;
 }
 .cards-bx .card{
-    margin: 10px 30px;
+    margin: 10px 17px;
     position: relative;
     width: 320px;
     height: 450px;
