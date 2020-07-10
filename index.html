@@ -93,16 +93,15 @@
         </div>
     </section>
     <section id="about" class="section">
-        
-        <div class="container flex-wrap">
-            <h1 class="font-overseer text-large text-center">About Us</h1>
-            <div class="content">
-                <div class="text-box">
-                    <p>Nuka-Cola entered the beverage market in 2044, with the invention of the soft drink by John-Caleb Bradberton after two years of experimentation. Though strictly unhealthy (containing 120% of the recommended daily allowance of sugar), it took the United States market by storm and within a year it could be purchased nationwide. Its popularity rapidly increased and within several years it was the most popular beverage across the globe.</p>
-                </div>
-                <div>
-                    <img src="public/images/nuka_girl.png" alt="nuka-girl" width="80%">
-                </div>
+        <!-- <img src="../images/bg-red.png" alt="bg-red">    -->
+        <h1 class="font-overseer text-large text-center">About Us</h1>
+        <div class="container">
+            <div class="d-flex align-end overflow-hidden">
+                <img id="cola-poster" src="public/images/nukacola-poster_no_bottle.png" alt="nuka-poster" width="300px">
+                <img id="cola-bottle" class="shadowed" src="public/images/nukacola-poster_bottle.png" width="300px" alt="">
+            </div>
+            <div>
+                <p>Nuka-Cola entered the beverage market in 2044, with the invention of the soft drink by John-Caleb Bradberton after two years of experimentation. Though strictly unhealthy (containing 120% of the recommended daily allowance of sugar), it took the United States market by storm and within a year it could be purchased nationwide. Its popularity rapidly increased and within several years it was the most popular beverage across the globe.</p>
             </div>
         </div>
     </section>
@@ -135,6 +134,6 @@
     window.addEventListener('mousemove', (e) => {
         bottles.style.left = -e.clientX*mouseInfluence + 'px';
         bottles.style.top  = -e.clientY*mouseInfluence + 'px';
-    }); 
+    });
 </script>
 </html>

@@ -47,6 +47,14 @@ a {
     font-size: 2.4em;
 }
 
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 .flex-wrap{
     flex-wrap: wrap;
 }
@@ -75,19 +83,96 @@ a {
 
 #about{
     display: flex;
+    flex-direction: column;
     position: relative;
     background-image: url('../images/bg-red.png'); 
     /* height: 600px; */
     background-size: cover;
     min-height: 600px;
-}
-#about .container .content{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;    
+    align-items: center;
+    justify-content: center;
 }
 
+#about .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-spacing: border-box;
+}
+
+
+#about p{
+    width: 80%;
+}
+
+#about .container div{
+    flex: 1;
+    padding: 30px;
+    position: relative;
+}
+
+@media only screen and (max-width: 1024px) {
+    #about .container{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #cola-poster {
+        transform: skew(0deg, 0deg) !important;
+    }
+    #about .container div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0px 10px ;
+    }
+}
+
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+#cola-poster{
+    transform: skew(-2deg, 2deg);  
+}
+
+#cola-bottle{
+    position: absolute;
+    animation: cola-bottle 5s ease-in-out;
+    animation-iteration-count: infinite;
+    transform: scale(1);
+}
+
+.shadowed {
+    -webkit-filter: drop-shadow(21px -11px 6px rgba(0,0,0,0.5));
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
+@keyframes cola-bottle{
+    from {
+        transform: scale(1);
+    }
+    50%   {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.mr-10{
+    margin-right: 10px;
+}
+
+.ml-10{
+    margin-left: 10px;
+}
 
 .text-box{
     font-weight: 500;
@@ -161,7 +246,7 @@ a {
     font-weight: 200;
 }
 .anim-upndown{
-    animation: upndown 3s;
+    animation: upndown 3s ease-in-out;
     animation-iteration-count: infinite;
 }
 
@@ -279,6 +364,7 @@ a {
     display: flex;
     justify-content: center;
     min-height: 600px ;
+    margin-bottom: 50px;
 }
 .cards-bx .card{
     margin: 10px 30px;
