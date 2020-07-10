@@ -9,16 +9,19 @@
     <title>Nuka Cola</title>
 </head>
 <body>
+    <a id="go-up" href="#">
+        <img src="public/images/arrow-up-5-256.png" alt="up-arrow">
+    </a>
     <header id="main-header">
         <nav class="navbar">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#">Clients</a></li>
             </ul>
         </nav>
-        <img id="bg" src="public/images/bg.png" alt="">
+        <img id="bg" class="anim-brightness" src="public/images/bg.png" alt="">
         <img id="bg-rocks" src="public/images/back_02.png" alt="">
         <img id="bg-rock" src="public/images/back_01.png" alt="">
         <div class="anim-upndown" id="div-container">
@@ -116,15 +119,20 @@
     const front     = document.getElementById("front");
     const text      = document.getElementById("nuka-description");
     const bottles   = document.getElementById("bottles");
+    const arrow     = document.getElementById("go-up");
 
+    var value;
     window.addEventListener('scroll', function(){
-        var value = window.scrollY;
+        value = window.scrollY;
+        arrow.style.opacity = (value > 50) ? clamp(value*0.005, 0, 1) : 0;
+        arrow.style.display = (value > 50) ? 'block' : 'none';
+        console.log(value);
         bg.style.top        = (value/3) + 'px';
         bg_rocks.style.top  = (value*0.25) + 'px';
         bg_rock.style.top   = (value*0.15) + 'px';
         front.style.top     = (value*0.01) + 'px';
         if(screen.width>600){
-            text.style.top      = (value*0.75) + 'px';
+            text.style.top  = (value*0.75) + 'px';
         }
         text.style.opacity  = 1-(value*0.002);
     });
