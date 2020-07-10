@@ -24,7 +24,7 @@ Some texts were collected in [the Fallout wiki](https://fallout.fandom.com/).
 
 #### 🖼️ Images and Fonts
 
-(Overseer font)[https://www.dafont.com/overseer.font]
+[Overseer font](https://www.dafont.com/overseer.font)
 
 [Photography of Night Sky - by Juan from Pexels](https://www.pexels.com/photo/photography-of-night-sky-733475/)
 
