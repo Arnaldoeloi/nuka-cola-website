@@ -131,7 +131,6 @@
         value = window.scrollY;
         arrow.style.opacity = (value > 50) ? clamp(value*0.005, 0, 1) : 0;
         arrow.style.display = (value > 50) ? 'block' : 'none';
-        console.log(value);
         bg.style.top        = (value/3) + 'px';
         bg_rocks.style.top  = (value*0.25) + 'px';
         bg_rock.style.top   = (value*0.15) + 'px';
